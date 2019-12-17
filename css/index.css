@@ -180,18 +180,223 @@ a:link, a:visited{
 #page2{
 	clear: both;
 	width: 100%;
-	height: 800px;
+	height: 850px;
 	position: relative;
 	background: #eee;
 	margin: 50px auto;
+}
+.page2power{
+	width: 1600px;
+	height: 100px;
+	position: absolute;
+	top: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	display: inline-block;
+	margin-top: 100px;
+	opacity: 0;
+}
+.page2powerbox{
+	width: 400px;
+	height: 50px;
+	position: relative;
+	display: inline-block;
+	float: left;
+	padding: 0 20px;
+}
+.html{
+	width: 100%;
+	height: 30px;
+	background: #ddd;
+	display: inline-block;
+	border-radius: 50px;
+	position: relative;
+}
+.html::before{
+	content: "HTML5";
+	display: block;
+	clear: both;
+	color: #f0652a;
+	opacity: 0.5;
+	position: absolute;
+	top: -150%;
+	left: 2%;
+	font-size: 50px;
+	font-weight: 900;
+	z-index: 9;
+}
+.htmlbox{
+	width: 0;
+	height: 30px;
+	display: inline-block;
+	background: #f0652a;
+	transition: 0.5s;
+	opacity: 0.7;
+	border-radius: 50px;
+	animation: progre 1.5s linear both;
+}
+.htmlbox span{
+	display: inline-block;
+	float: right;
+	line-height: 30px;
+	font-size: 12px;
+	color: #fff;
+}
+.css{
+	width: 100%;
+	height: 30px;
+	background: #ddd;
+	display: inline-block;
+	border-radius: 50px;
+	position: relative;
+}
+.css::before{
+	content: "CSS3";
+	display: block;
+	clear: both;
+	color: #32a9dc;
+	opacity: 0.5;
+	position: absolute;
+	top: -150%;
+	left: 2%;
+	font-size: 50px;
+	font-weight: 900;
+	z-index: 9;
+}
+.cssbox{
+	width: 90%;
+	height: 30px;
+	display: inline-block;
+	background: #32a9dc;
+	transition: 0.5s;
+	opacity: 0.7;
+	border-radius: 50px;
+	animation: progre2 1.5s linear both;
+}
+.cssbox span{
+	display: inline-block;
+	float: right;
+	line-height: 30px;
+	font-size: 12px;
+	color: #fff;
+}
+.js{
+	width: 100%;
+	height: 30px;
+	background: #ddd;
+	display: inline-block;
+	border-radius: 50px;
+	position: relative;
+}
+.js::before{
+	content: "JAVASCRIPT";
+	display: block;
+	clear: both;
+	color: #f0db50;
+	opacity: 0.5;
+	position: absolute;
+	top: -150%;
+	left: 2%;
+	font-size: 50px;
+	font-weight: 900;
+	z-index: 9;
+}
+.jsbox{
+	width: 40%;
+	height: 30px;
+	display: inline-block;
+	background: #f0db50;
+	transition: 0.5s;
+	opacity: 0.7;
+	border-radius: 50px;
+	animation: progre3 1.5s linear both;
+}
+.jsbox span{
+	display: inline-block;
+	float: right;
+	line-height: 30px;
+	font-size: 12px;
+	color: #fff;
+}
+.jq{
+	width: 100%;
+	height: 30px;
+	background: #ddd;
+	display: inline-block;
+	border-radius: 50px;
+	position: relative;
+}
+.jq::before{
+	content: "JQUERY";
+	display: block;
+	clear: both;
+	color: #0669ad;
+	opacity: 0.5;
+	position: absolute;
+	top: -150%;
+	left: 2%;
+	font-size: 50px;
+	font-weight: 900;
+	z-index: 9;
+}
+.jqbox{
+	width: 50%;
+	height: 30px;
+	display: inline-block;
+	background: #0669ad;
+	transition: 0.5s;
+	opacity: 0.7;
+	border-radius: 50px;
+	animation: progre4 1.5s linear both;
+}
+.jqbox span{
+	display: inline-block;
+	float: right;
+	line-height: 30px;
+	font-size: 12px;
+	color: #fff;
+}
+@keyframes progre{
+	0%{
+		width: 0%;
+	}
+	100%{
+		width: 85%;
+	}
+}
+@keyframes progre2{
+	0%{
+		width: 0%;
+	}
+	100%{
+		width: 90%;
+	}
+}
+
+@keyframes progre3{
+	0%{
+		width: 0%;
+	}
+	100%{
+		width: 40%;
+	}
+}
+
+@keyframes progre4{
+	0%{
+		width: 0%;
+	}
+	100%{
+		width: 50%;
+	}
 }
 .page2img{
 	width: 400px;
 	height: auto;
 	position: absolute;
-	top: 50%;
+	top: 30%;
 	left: 50%;
-	transform: translate(-50%,-50%);
+	transform: translateX(-50%);
 	z-index: 2;
 }
 .page2img img{
@@ -207,52 +412,7 @@ a:link, a:visited{
 	position: absolute;
 	top: -4%;
 	left: 5%;
-	background: #eaeaea;
+	background: #ddd;
 	z-index: -1;
 }
-.page2power{
-	width: 400px;
-	height: 500px;
-	position: absolute;
-	top: 10%;
-	left: 5%;
-}
-.html{
-	width: 100%;
-	height: 10px;
-	margin-top: 50px;
-	background: #fff;
-	position: relative;
-}
-.html::before{
-	content: "HTML5";
-	display: block;
-	clear: both;
-	color: #f0652a;
-	opacity: 0.1;
-	position: absolute;
-	top: -400%;
-	left: 2%;
-	font-size: 70px;
-	font-weight: 600;
-}
-.html::after{
-	content: "85%";
-	display: block;
-	clear: both;
-	color: #f0652a;
-	opacity: 0.2;
-	position: absolute;
-	top: -200%;
-	left: 88%;
-	font-size: 40px;
-	font-weight: 600;
-}
-.htmlbox{
-	width: 85%;
-	height: 10px;
-	display: inline-block;
-	background: #f0652a;
-	transition: 0.5s;
-	opacity: 0.7;
-}
+
