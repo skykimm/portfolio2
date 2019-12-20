@@ -43,20 +43,26 @@ a:link, a:visited{
 	opacity: 0.8;
 }
 .page1header{
-	width: 400px;
-	height: 50px;
-	float: right;
+	width: 450px;
+	height: 60px;
+	position: fixed;
+	top: 50%;
+	left: 83%;
+	transform: rotate(90deg);
+	z-index: 999;
 }
 .page1header a{
 	width: 100px;
 	height: 50px;
 	line-height: 50px;
+	font-size: 16px;
 	display: inline-block;
 	float: left;
 	text-align: center;
 }
 .page1header a:hover{
 	color: #aaa;
+	transform: rotate(270deg);
 }
 .page1scroll{
 	clear: both;
@@ -164,14 +170,13 @@ a:link, a:visited{
 	width: 450px;
 	height: 60px;
 	position: absolute;
-	top: 50%;
-	left: 80%;
-	transform: rotate(90deg);
+	top: 2%;
+	left: 76%;
 }
 .page1copy span{
 	display: block;
 	line-height: 2;
-	letter-spacing: 2px;
+	letter-spacing: 1px;
 	text-align: center;
 	font-size: 12px;
 	color: #ccc;
@@ -184,219 +189,40 @@ a:link, a:visited{
 	position: relative;
 	background: #eee;
 	margin: 50px auto;
+	overflow: hidden;
 }
-.page2power{
-	width: 1600px;
-	height: 100px;
-	position: absolute;
-	top: 0;
-	left: 50%;
-	transform: translateX(-50%);
-	display: inline-block;
-	margin-top: 100px;
-	opacity: 0;
-}
-.page2powerbox{
-	width: 400px;
-	height: 50px;
-	position: relative;
-	display: inline-block;
-	float: left;
-	padding: 0 20px;
-}
-.html{
-	width: 100%;
-	height: 30px;
-	background: #ddd;
-	display: inline-block;
-	border-radius: 50px;
-	position: relative;
-}
-.html::before{
-	content: "HTML5";
+#page2::before{
+	content: "introduce";
 	display: block;
 	clear: both;
-	color: #f0652a;
-	opacity: 0.5;
 	position: absolute;
-	top: -150%;
-	left: 2%;
-	font-size: 50px;
-	font-weight: 900;
-	z-index: 9;
-}
-.htmlbox{
-	width: 0;
-	height: 30px;
+	top: 36%;
+	left: -20%;
+	color: rgba(255,255,255,0.6);
+	font-size: 200px;
+	transform: rotate(270deg);
 	display: inline-block;
-	background: #f0652a;
-	transition: 0.5s;
-	opacity: 0.7;
-	border-radius: 50px;
-	animation: progre 1.5s linear both;
 }
-.htmlbox span{
-	display: inline-block;
-	float: right;
-	line-height: 30px;
-	font-size: 12px;
-	color: #fff;
-}
-.css{
-	width: 100%;
-	height: 30px;
-	background: #ddd;
-	display: inline-block;
-	border-radius: 50px;
-	position: relative;
-}
-.css::before{
-	content: "CSS3";
+#page2::after{
+	content: "Profile";
 	display: block;
 	clear: both;
-	color: #32a9dc;
-	opacity: 0.5;
 	position: absolute;
-	top: -150%;
-	left: 2%;
-	font-size: 50px;
+	top: 27%;
+	left: 65%;
+	transform: rotate(90deg);
+	font-size: 300px;
 	font-weight: 900;
-	z-index: 9;
-}
-.cssbox{
-	width: 90%;
-	height: 30px;
-	display: inline-block;
-	background: #32a9dc;
-	transition: 0.5s;
-	opacity: 0.7;
-	border-radius: 50px;
-	animation: progre2 1.5s linear both;
-}
-.cssbox span{
-	display: inline-block;
-	float: right;
-	line-height: 30px;
-	font-size: 12px;
-	color: #fff;
-}
-.js{
-	width: 100%;
-	height: 30px;
-	background: #ddd;
-	display: inline-block;
-	border-radius: 50px;
-	position: relative;
-}
-.js::before{
-	content: "JAVASCRIPT";
-	display: block;
-	clear: both;
-	color: #f0db50;
 	opacity: 0.5;
-	position: absolute;
-	top: -150%;
-	left: 2%;
-	font-size: 50px;
-	font-weight: 900;
-	z-index: 9;
-}
-.jsbox{
-	width: 40%;
-	height: 30px;
-	display: inline-block;
-	background: #f0db50;
-	transition: 0.5s;
-	opacity: 0.7;
-	border-radius: 50px;
-	animation: progre3 1.5s linear both;
-}
-.jsbox span{
-	display: inline-block;
-	float: right;
-	line-height: 30px;
-	font-size: 12px;
-	color: #fff;
-}
-.jq{
-	width: 100%;
-	height: 30px;
-	background: #ddd;
-	display: inline-block;
-	border-radius: 50px;
-	position: relative;
-}
-.jq::before{
-	content: "JQUERY";
-	display: block;
-	clear: both;
-	color: #0669ad;
-	opacity: 0.5;
-	position: absolute;
-	top: -150%;
-	left: 2%;
-	font-size: 50px;
-	font-weight: 900;
-	z-index: 9;
-}
-.jqbox{
-	width: 50%;
-	height: 30px;
-	display: inline-block;
-	background: #0669ad;
-	transition: 0.5s;
-	opacity: 0.7;
-	border-radius: 50px;
-	animation: progre4 1.5s linear both;
-}
-.jqbox span{
-	display: inline-block;
-	float: right;
-	line-height: 30px;
-	font-size: 12px;
-	color: #fff;
-}
-@keyframes progre{
-	0%{
-		width: 0%;
-	}
-	100%{
-		width: 85%;
-	}
-}
-@keyframes progre2{
-	0%{
-		width: 0%;
-	}
-	100%{
-		width: 90%;
-	}
-}
+	color: #ddd;
 
-@keyframes progre3{
-	0%{
-		width: 0%;
-	}
-	100%{
-		width: 40%;
-	}
-}
-
-@keyframes progre4{
-	0%{
-		width: 0%;
-	}
-	100%{
-		width: 50%;
-	}
 }
 .page2img{
-	width: 400px;
+	width: 500px;
 	height: auto;
 	position: absolute;
-	top: 30%;
-	left: 50%;
-	transform: translateX(-50%);
+	top: 150px;
+	left: 900px;
 	z-index: 2;
 }
 .page2img img{
@@ -407,12 +233,121 @@ a:link, a:visited{
 	content: "";
 	display: block;
 	clear: both;
-	width: 400px;
-	height: 500px;
+	width: 500px;
+	height: 600px;
 	position: absolute;
-	top: -4%;
-	left: 5%;
+	top: -7%;
+	left: 10%;
 	background: #ddd;
 	z-index: -1;
 }
+.page2title{
+	width: 800px;
+	height: 800px;
+	position: relative;
+	margin: 30px;
+	padding: 0 0 0 70px;
+}
+.page2title::before{
+	content: "";
+	display: block;
+	clear: both;
+	position: absolute;
+	top: -5%;
+	left: -60%;
+	border: 1px solid rgba(0,0,0,0.05);
+	width: 1000px;
+	height: 1000px;
+	border-radius: 50%;
+}
+.page2tltlebox{
+	width: 600px;
+	height: 200px;
+	float: left;
+}
+.box2{
+	margin-left: 130px;
+}
+.title1{
+	color: red;
+}
+.page2tltlebox span{
+	width: 130px;
+	height: 200px;
+	line-height: 200px;
+	font-size: 70px;
+	font-weight: 400;
+	text-align: center;
+	display: inline-block;
+	float: left;
+}
+.page2tltlebox p:nth-child(2){
+	display: block;
+	font-size: 16px;
+	margin-top: 75px;
+}
+.page2tltlebox p:nth-child(3){
+	display: block;
+	font-size: 14px;
+	line-height: 1.5;
+	margin-top: 10px;
+}
 
+#page3{
+	width: 100%;
+	height: 1200px;
+	border: 1px solid red;
+	position: relative;
+	overflow: hidden;
+}
+#page3::before{
+	content: "Portfolio";
+	display: block;
+	clear: both;
+	position: absolute;
+	top: -25%;
+	left: -3%;
+	font-size: 400px;
+	font-weight: 900;
+	color:rgba(0,0,0,0.03);
+}
+.page3box{
+	width: 1600px;
+	height: 1200px;
+	position: relative;
+	margin: 200px auto;
+}
+.page3img{
+	width: 500px;
+	height: 400px;
+	float: left;
+	position: relative;
+	margin: 15px;
+	border: 1px solid rgba(0,0,0,0.6);
+}
+.page3img img{
+	width: 100%;
+	height: 100%;
+	display: block;
+}
+.page3hover{
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: none;
+}
+.iloomimg:hover .iloomspan,
+.lineimg:hover .linespan,
+.dongwonimg:hover .dongwonspan,
+.dehanimg:hover .dehanspan,
+.kakaoimg:hover .kakaospan{
+	display: block;
+}
+.page3hover span{
+	width: 500px;
+	height: 400px;
+	display: block;
+	color: #fff;
+	padding: 30px;
+	background: rgba(0,0,0,0.8);
+}
