@@ -13,7 +13,7 @@ body{
 	padding: 0;
 	font-size: 14px;
 	font-weight: 300;
-	font-family: "맑은고딕";
+	font-family:'Roboto', sans-serif;
 }
 a:link, a:visited{
 	text-decoration: none;
@@ -59,10 +59,11 @@ a:link, a:visited{
 	display: inline-block;
 	float: left;
 	text-align: center;
+	transition: 0.5s;
 }
 .page1header a:hover{
 	color: #aaa;
-	transform: rotate(270deg);
+	transform: scale(1.1);
 }
 .page1scroll{
 	clear: both;
@@ -171,13 +172,13 @@ a:link, a:visited{
 	height: 60px;
 	position: absolute;
 	top: 2%;
-	left: 76%;
+	left: 74%;
 }
 .page1copy span{
 	display: block;
 	line-height: 2;
 	letter-spacing: 1px;
-	text-align: center;
+	text-align: right;
 	font-size: 12px;
 	color: #ccc;
 }
@@ -245,7 +246,7 @@ a:link, a:visited{
 	width: 800px;
 	height: 800px;
 	position: relative;
-	margin: 30px;
+	margin: 50px;
 	padding: 0 0 0 70px;
 }
 .page2title::before{
@@ -262,7 +263,7 @@ a:link, a:visited{
 }
 .page2tltlebox{
 	width: 600px;
-	height: 200px;
+	height: 180px;
 	float: left;
 }
 .box2{
@@ -271,32 +272,35 @@ a:link, a:visited{
 .title1{
 	color: red;
 }
+.title2{
+	margin-right: 40px;
+}
 .page2tltlebox span{
-	width: 130px;
-	height: 200px;
-	line-height: 200px;
+	width: 90px;
+	height: 160px;
+	line-height: 160px;
 	font-size: 70px;
-	font-weight: 400;
+	font-weight: 900;
 	text-align: center;
 	display: inline-block;
 	float: left;
 }
 .page2tltlebox p:nth-child(2){
 	display: block;
-	font-size: 16px;
-	margin-top: 75px;
+	font-size: 25px;
+	font-weight: 900;
+	margin-top: 40px;
 }
 .page2tltlebox p:nth-child(3){
 	display: block;
 	font-size: 14px;
 	line-height: 1.5;
-	margin-top: 10px;
+	margin-top: 20px;
 }
 
 #page3{
 	width: 100%;
-	height: 1200px;
-	border: 1px solid red;
+	height: 1300px;
 	position: relative;
 	overflow: hidden;
 }
@@ -305,17 +309,123 @@ a:link, a:visited{
 	display: block;
 	clear: both;
 	position: absolute;
-	top: -25%;
-	left: -3%;
+	top: 20%;
+	left: 0%;
 	font-size: 400px;
 	font-weight: 900;
 	color:rgba(0,0,0,0.03);
+	transform: rotate(350deg);
+}
+.page3pro{
+	width: 1000px;
+	height: 100px;
+	position: relative;
+	display: inline-block;
+	position: absolute;
+	top: 5%;
+	left: 50%;
+	transform: translateX(-50%);
+	opacity: 0;
+}
+.page3pro .html{
+	width: 150px;
+	height: 150px;
+	position: absolute;
+	top: 0%;
+	left: 0%;
+}
+.page3pro .css{
+	width: 150px;
+	height: 150px;
+	position: absolute;
+	top: 0%;
+	left: 25%;
+}
+.page3pro .js{
+	width: 150px;
+	height: 150px;
+	position: absolute;
+	top: 0%;
+	left: 50%;
+}
+.page3pro .jq{
+	width: 150px;
+	height: 150px;
+	position: absolute;
+	top: 0%;
+	left: 75%;
+}
+.page3pro img{
+	width: 100%;
+	height: 100%;
+}
+.page3pro .html::before{
+	content: "HTML5";
+	display: block;
+	clear: both;
+	position: absolute;
+	top: 100%;
+	left: 50%;
+	transform: translateX(-50%);
+	letter-spacing: 1.5px;
+}
+.page3pro .css::before{
+	content: "CSS3";
+	display: block;
+	clear: both;
+	position: absolute;
+	top: 100%;
+	left: 50%;
+	transform: translateX(-50%);
+	letter-spacing: 1.5px;
+}
+.page3pro .js::before{
+	content: "JAVASCRIPT";
+	display: block;
+	clear: both;
+	position: absolute;
+	top: 100%;
+	left: 50%;
+	transform: translateX(-50%);
+	letter-spacing: 1.5px;
+}
+.page3pro .jq::before{
+	content: "JQUERY";
+	display: block;
+	clear: both;
+	position: absolute;
+	top: 100%;
+	left: 50%;
+	transform: translateX(-50%);
+	letter-spacing: 1.5px;
 }
 .page3box{
 	width: 1600px;
 	height: 1200px;
 	position: relative;
-	margin: 200px auto;
+	margin: 400px auto;
+}
+.page3box::before{
+	content: "클릭시 website로 이동합니다.";
+	clear: both;
+	display: block;
+	position: absolute;
+	top: -1%;
+	left: 1%;
+	z-index: 9;
+	color: #aaa;
+}
+.page3box::after{
+	content: "Portfolio";
+	display: block;
+	clear: both;
+	position: absolute;
+	top: -7%;
+	left: 50%;
+	transform: translateX(-50%);
+	font-size: 50px;
+	font-weight: 900;
+	letter-spacing: 2px;
 }
 .page3img{
 	width: 500px;
@@ -324,6 +434,7 @@ a:link, a:visited{
 	position: relative;
 	margin: 15px;
 	border: 1px solid rgba(0,0,0,0.6);
+	opacity: 0;
 }
 .page3img img{
 	width: 100%;
@@ -336,18 +447,121 @@ a:link, a:visited{
 	left: 0;
 	display: none;
 }
-.iloomimg:hover .iloomspan,
-.lineimg:hover .linespan,
-.dongwonimg:hover .dongwonspan,
-.dehanimg:hover .dehanspan,
-.kakaoimg:hover .kakaospan{
+.page3img:hover .page3hover{
 	display: block;
 }
-.page3hover span{
+.page3hover span:nth-child(1){
 	width: 500px;
 	height: 400px;
+	display: inline-block;
+	background: rgba(0,0,0,0.9);
+	position: relative;
+}
+.page3hover .pagetitle1{
 	display: block;
 	color: #fff;
-	padding: 30px;
-	background: rgba(0,0,0,0.8);
+	position: absolute;
+	top: 10%;
+	left: 50%;
+	transform: translateX(-50%);
+	font-size: 20px;
+	font-weight: 600;
+}
+.page3hover .pagetitle2{
+	width: 100%;
+	height: auto;
+	display: block;
+	color: #fff;
+	line-height: 2;
+	position: absolute;
+	top: 30%;
+	left: 50%;
+	transform: translateX(-50%);
+	font-size: 14px;
+	text-align: center;
+}
+.page3hover .pagetitle3{
+	width: 100%;
+	height: auto;
+	display: block;
+	color: #fff;
+	line-height: 2;
+	position: absolute;
+	top: 40%;
+	left: 50%;
+	transform: translateX(-50%);
+	font-size: 14px;
+	text-align: center;
+}
+.page3hover .pagetitle4{
+	width: 100%;
+	height: auto;
+	display: block;
+	color: #fff;
+	line-height: 2;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translateX(-50%);
+	font-size: 14px;
+	text-align: center;
+}
+.page3hover .pagetitle5{
+	width: 100%;
+	height: auto;
+	display: block;
+	color: #fff;
+	line-height: 2;
+	position: absolute;
+	top: 60%;
+	left: 50%;
+	transform: translateX(-50%);
+	font-size: 14px;
+	text-align: center;
+}
+#page4{
+	clear: both;
+	width: 100%;
+	height: 100px;
+	background: #eee;
+	/*position: relative;*/
+}
+.footer{
+	width: 100%;
+	height: 100%;
+}
+.footerleft{
+	width: 70%;
+	height: 100%;
+	float: left;
+}
+.footerleft span{
+	display: block;
+	line-height: 2;
+	padding: 20px 0 0 120px;
+	font-size: 13px;
+}
+.footerright{
+	width: 30%;
+	height: 100%;
+	float: left;
+}
+.footerright img{
+	vertical-align: middle;
+}
+.footerright a{
+	display: inline-block;
+	transition: 0.5s;
+}
+.footerright a:hover{
+	color: #bbb;
+	transform: scale(1.1);
+}
+.footerright span{
+	width: 33.33%;
+	height: 100%;
+	display: inline-block;
+	line-height: 100px;
+	float: left;
+	text-align: center;
 }
