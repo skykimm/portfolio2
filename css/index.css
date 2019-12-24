@@ -114,7 +114,7 @@ a:link, a:visited{
 	height: 500px;
 	clear: both;
 	position: absolute;
-	top: 20%;
+	top: 18%;
 	left: -3%;
 	/*transform: rotate(270deg);*/
 }
@@ -532,7 +532,7 @@ a:link, a:visited{
 	height: 100%;
 }
 .footerleft{
-	width: 70%;
+	width: 60%;
 	height: 100%;
 	float: left;
 }
@@ -543,7 +543,7 @@ a:link, a:visited{
 	font-size: 13px;
 }
 .footerright{
-	width: 30%;
+	width: 40%;
 	height: 100%;
 	float: left;
 }
