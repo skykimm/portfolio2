@@ -13,7 +13,7 @@ body{
 	padding: 0;
 	font-size: 14px;
 	font-weight: 300;
-	font-family:'Roboto', sans-serif;
+	font-family:'Nanum Gothic',Roboto, sans-serif;
 }
 a:link, a:visited{
 	text-decoration: none;
@@ -52,14 +52,16 @@ a:link, a:visited{
 	z-index: 999;
 }
 .page1header a{
-	width: 100px;
+	width: 110px;
 	height: 50px;
 	line-height: 50px;
-	font-size: 16px;
+	font-size: 22px;
 	display: inline-block;
 	float: left;
+	font-family: 'Roboto',sans-serif;
 	text-align: center;
 	transition: 0.5s;
+	color: #555;
 }
 .page1header a:hover{
 	color: #aaa;
@@ -108,39 +110,34 @@ a:link, a:visited{
 	z-index: -5;
 }
 .page1title{
-	width: 850px;
-	height: 400px;
+	width: 1000px;
+	height: 500px;
 	clear: both;
 	position: absolute;
-	top: 27%;
-	left: 5%;
-	transform: rotate(270deg);
+	top: 20%;
+	left: -3%;
+	/*transform: rotate(270deg);*/
 }
-.page1title span{
+.page1title #typewrite{
 	display: block;
 	font-size: 120px;
 	font-weight: 600;
-	line-height: 1;
+	line-height: 1.2;
+	letter-spacing: 2px;
 	opacity: 0.5;
-	animation: title 10s linear infinite;
+	position: relative;
+	box-sizing: border-box;
+	margin: 10%;
+	font-family: 'Roboto',sans-serif;
 }
-/*@keyframes title{
-	0%{
-		opacity: 0.6;
-	}
-	25%{
-		opacity: 0.7;
-	}
-	50%{
-		opacity: 1;
-	}
-	75%{
-		opacity: 1;
-	}
-	100%{
-		opacity: 1;
-	}
-}*/
+.page1title #typewrite::after {
+  content: attr(data-content);
+  color: #333;
+  position: absolute;
+  left: 0;
+  top:0;
+  text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.5);
+}
 .page1img{
 	width: 600px;
 	height: auto;
@@ -180,7 +177,7 @@ a:link, a:visited{
 	letter-spacing: 1px;
 	text-align: right;
 	font-size: 12px;
-	color: #ccc;
+	color: #333;
 }
 
 #page2{
@@ -317,43 +314,43 @@ a:link, a:visited{
 	transform: rotate(350deg);
 }
 .page3pro{
-	width: 1000px;
-	height: 100px;
+	width: 1200px;
+	height: 200px;
 	position: relative;
 	display: inline-block;
 	position: absolute;
-	top: 5%;
+	top: 2%;
 	left: 50%;
 	transform: translateX(-50%);
 	opacity: 0;
 }
 .page3pro .html{
-	width: 150px;
-	height: 150px;
+	width: 200px;
+	height: 200px;
 	position: absolute;
 	top: 0%;
-	left: 0%;
+	left: 2%;
 }
 .page3pro .css{
-	width: 150px;
-	height: 150px;
+	width: 200px;
+	height: 200px;
 	position: absolute;
 	top: 0%;
-	left: 25%;
+	left: 30%;
 }
 .page3pro .js{
-	width: 150px;
-	height: 150px;
+	width: 200px;
+	height: 200px;
 	position: absolute;
 	top: 0%;
-	left: 50%;
+	left: 55%;
 }
 .page3pro .jq{
-	width: 150px;
-	height: 150px;
+	width: 200px;
+	height: 200px;
 	position: absolute;
 	top: 0%;
-	left: 75%;
+	left: 80%;
 }
 .page3pro img{
 	width: 100%;
@@ -413,7 +410,7 @@ a:link, a:visited{
 	top: -1%;
 	left: 1%;
 	z-index: 9;
-	color: #aaa;
+	color: black;
 }
 .page3box::after{
 	content: "Portfolio";
@@ -441,14 +438,18 @@ a:link, a:visited{
 	height: 100%;
 	display: block;
 }
+.matop{
+	margin-top: 30px;
+}
 .page3hover{
 	position: absolute;
 	top: 0;
 	left: 0;
-	display: none;
+	opacity: 0;
+	transition: 0.5s;
 }
 .page3img:hover .page3hover{
-	display: block;
+	opacity: 1;
 }
 .page3hover span:nth-child(1){
 	width: 500px;
@@ -522,7 +523,7 @@ a:link, a:visited{
 #page4{
 	clear: both;
 	width: 100%;
-	height: 100px;
+	height: 150px;
 	background: #eee;
 	/*position: relative;*/
 }
@@ -538,7 +539,7 @@ a:link, a:visited{
 .footerleft span{
 	display: block;
 	line-height: 2;
-	padding: 20px 0 0 120px;
+	padding: 40px 0 0 120px;
 	font-size: 13px;
 }
 .footerright{
@@ -561,7 +562,7 @@ a:link, a:visited{
 	width: 33.33%;
 	height: 100%;
 	display: inline-block;
-	line-height: 100px;
+	line-height: 130px;
 	float: left;
 	text-align: center;
 }
